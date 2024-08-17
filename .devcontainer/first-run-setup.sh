@@ -66,7 +66,7 @@ clone_repo() {
   fi
 }
 
-clone_repo "https://github.com/arctan95/codespaces.git" "$HOME/.codespaces"
+clone_repo "https://github.com/Caocs/codespaces.git" "$HOME/.codespaces"
 
 # Fix up github codespaces
 if [ "${CODESPACES}" = true ]; then
@@ -100,7 +100,7 @@ source /etc/bashrc
 
 echo "Installing home-manager and switching into a new generation..."
 # Run Home Manager with experimental features
-nix run nixpkgs#home-manager -- switch --impure --flake github:arctan95/codespaces
+nix run nixpkgs#home-manager -- switch --impure --flake github:Caocs/codespaces
 
 # Check if it's a macOS system
 if [ "$platform" = "Darwin" ]; then
@@ -150,7 +150,7 @@ fi
 # Restore private passwords
 if [ "$restore_passwd" = "true" ]; then
   echo "Configurating passwords..."
-  clone_repo "https://github.com/arctan95/password-store.git" "$HOME/.password-store"
+  clone_repo "https://github.com/Caocs/password-store.git" "$HOME/.password-store"
   /bin/bash "$HOME/.password-store/setup.sh"
 fi
 
