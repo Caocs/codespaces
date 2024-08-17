@@ -38,8 +38,8 @@
   # Git
   programs.git = {
     enable = true;
-    userName = "arctan95";
-    userEmail = "jaeqentan@gmail.com";
+    userName = "cs.cao";
+    userEmail = "cs.cao@trip.com";
   };
 
   # Zsh
@@ -57,7 +57,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "asdf" "git" "pass" "z" ];
+      plugins = [ "asdf" "git" "z" ];
       theme = "bira";
     };
   };
